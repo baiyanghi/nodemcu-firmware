@@ -128,6 +128,21 @@ physical mode after setup
 #### See also
 [`wifi.getphymode()`](#wifigetphymode)
 
+## wifi.nullmodesleep()
+
+Configures whether or not WiFi automatically goes to sleep in NULL_MODE. Enabled by default. 
+
+#### Syntax
+`wifi.nullmodesleep(enable)`
+
+#### Parameters
+- `enable` 
+  - true: Enable WiFi auto sleep in NULL_MODE. (Default setting)
+  - false: Disable WiFi auto sleep in NULL_MODE. 
+
+#### Returns
+Current/new NULL_MODE sleep setting.
+
 ## wifi.sleeptype()
 
 Configures the WiFi modem sleep type.
@@ -1036,7 +1051,7 @@ T: Table returned by event.
 	- `SSID`: SSID of access point.  
 	- `BSSID`: BSSID of access point.  
 	- `channel`: The channel the access point is on.  
-- `wifi.eventmon.STA_DISCONNECT`: Station was disconnected from access point.  
+- `wifi.eventmon.STA_DISCONNECTED`: Station was disconnected from access point.  
 	- `SSID`: SSID of access point.  
 	- `BSSID`: BSSID of access point.  
 	- `REASON`: See [wifi.eventmon.reason](#wifieventmonreason) below.  
